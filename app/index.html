@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>QuizApp</h1>
+    <h2>Assess Your Knowledge</h2>
+    <form id="choose-category-form">
+      <label for="category-input">Choose your Category:</label>
+      <select
+        id="category-input"
+        name="category-input"
+        form="choose-category-form"
+      >
+        <!-- <option id="Computer" value="Computer">ComputerScience</option>
+        <option id="Geology" value="Geology">Geology</option> --></select
+      ><br /><br />
+      <button type="submit" id="proceed-btn">Proceed</button>
+    </form>
+    <div id="app-wrap">
+      <div id="app"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

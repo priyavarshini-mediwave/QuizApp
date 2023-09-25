@@ -1,0 +1,18 @@
+.choosediv{
+    margin:20px;
+    padding: 20px;
+    border:2px groove black;
+    border-radius: 15px;
+    
+}
+.buttonback{
+   background-color: plum;
+   margin-right: 20px;
+}
+.buttonsdiv{
+    display: flex;
+    justify-content: center;
+}
+.resultdiv{
+    text-align: right;
+}
