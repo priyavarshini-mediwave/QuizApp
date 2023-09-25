@@ -188,7 +188,8 @@ function makeChoosediv(item) {
     radiobtn.setAttribute("type", "radio");
     radiobtn.setAttribute("name", `ans-${item.id}`);
 
-    radiobtn.value = item.options[i].answer;
+    // radiobtn.value = item.options[i].answer;
+    radiobtn.value = item.options[i].id;
 
     const radioname = document.createTextNode(item.options[i].answer);
     div.appendChild(radiobtn);
@@ -209,7 +210,7 @@ function makeChoosediv(item) {
       `input[name="ans-${item.id}"]:checked`
     );
 
-    console.log(selected);
+    console.log("sel", selected);
     //console.log(selected.value);
     // const checkAnswer = item.options[i];
     // console.log(checkAnswer);
@@ -218,7 +219,7 @@ function makeChoosediv(item) {
     if (selected) {
       const choosenAnswer = selected.value;
       const answerIndex = item["options"].findIndex(
-        (item) => item.answer === choosenAnswer
+        (item) => item.id === choosenAnswer
       );
       const crtansId = item.options.findIndex((ans) => ans.isCorrect === true);
       const crtansname = item.options[crtansId].answer;
