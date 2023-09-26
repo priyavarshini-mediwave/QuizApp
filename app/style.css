@@ -34,7 +34,7 @@ select {
   color: blue;
   width: 100px;
   height: 50px;
-  font-size:large;
+  font-size: large;
   border-radius: 15px;
   margin-right: 20px;
 }
@@ -43,7 +43,7 @@ select {
   height: 50px;
   background-color: gainsboro;
   color: blue;
-  font-size:large;
+  font-size: large;
   border-radius: 15px;
 }
 .buttonsdiv {
@@ -55,13 +55,22 @@ select {
   color: green;
 }
 .border-green {
+  margin: 20px;
+  padding: 20px;
   border: 2px groove rgb(161, 219, 161);
+  border-radius: 15px;
 }
 .border-red {
+  margin: 20px;
+  padding: 20px;
   border: 2px groove red;
+  border-radius: 15px;
 }
 .border-orange {
+  margin: 20px;
+  padding: 20px;
   border: 2px groove orange;
+  border-radius: 15px;
 }
 .green {
   color: rgb(72, 196, 72);

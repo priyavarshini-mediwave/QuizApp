@@ -101,13 +101,11 @@ function appendtoselectInput() {
   }
 }
 appendtoselectInput();
-function loadfromLocal(selectedValue) {
-  setLocalStorageItem("selectedCategory", selectedValue);
-  let selectedValueIndex = quiz.categories.findIndex(
-    (item) => item.value == selectedValue
-  );
-  let selectedId = quiz.categories[selectedValueIndex].id;
-
+function loadfromLocal(selectedId) {
+  
+  
+  
+  setLocalStorageItem("selectedCategory", selectedId);
   form.style.display = "none";
   const appWrap = document.querySelector("#app-wrap");
   appWrap.style.display = "block";
@@ -129,7 +127,11 @@ btnproceed.addEventListener("click", function (e) {
   e.preventDefault();
   const selectInput = document.querySelector("#category-input");
   let selectedValue = selectInput.value;
-  loadfromLocal(selectedValue);
+  let selectedValueIndex = quiz.categories.findIndex(
+    (item) => item.value == selectedValue
+  );
+  let selectedId = quiz.categories[selectedValueIndex].id;
+  loadfromLocal(selectedId);
 });
 
 function appendtoButtonsdiv() {
@@ -244,13 +246,20 @@ function correctAnsShow(ans, resultId, add) {
   const divId = `#div-${resultId}`;
   const divClass = "border-" + add;
   const div = document.querySelector(divId);
-  div.classList.add(divClass);
+  div.className=divClass;
   const selector = `#resultdiv${resultId}`;
   console.log(selector);
   const result = document.querySelector(selector);
   result.innerHTML = "Ans: " + ans;
-  result.classList.add(add);
+  
+  //againClick();
 }
+function againClick() {
+  if (document.getElementById("#buttonSubmit").click()) {
+    div.classList.remove(divClass);
+  }
+}
+
 function Moveback() {
   const appWrap = document.querySelector("#app-wrap");
   appWrap.style.display = "none";
